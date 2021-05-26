@@ -1,0 +1,12 @@
+public static String getContinent(String country) {
+        int position = 3;
+        OUT:for(int i=0; i<continentData.length; i++) {
+            for(int j=0; j<continentData[i].length; j++){
+                if(continentData[i][j].equals(country)) {
+                    position = i;
+                    break OUT;
+                }
+            }
+        }
+        return continentData[position][0];
+    }
